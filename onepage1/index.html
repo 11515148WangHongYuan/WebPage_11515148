@@ -3,609 +3,548 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="藍天咖啡，為手沖咖啡愛好者挑選當季精品咖啡豆，讓每一杯都清澈、明亮、值得細品。">
-  <title>藍天咖啡｜讓風味，慢慢抵達</title>
+  <meta name="description" content="來露天飯店，讓旅途在自然與微光之間慢下來。探索舒適客房與一段剛剛好的停留。">
+  <meta name="theme-color" content="#123d55">
+  <title>露天飯店｜把日子住進風景裡</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&family=Noto+Serif+TC:wght@500;600;700;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Serif+TC:wght@400;500;600;700;900&display=swap" rel="stylesheet">
   <style>
     :root {
-      --navy: #062742;
-      --blue: #0c5b95;
-      --sky: #75c6e8;
-      --mist: #eaf5f7;
-      --cream: #fbfaf6;
-      --ink: #122534;
-      --muted: #607482;
-      --line: #d7e4e8;
-      --sand: #e5b66b;
-      --shadow: 0 18px 50px rgba(6, 39, 66, .13);
+      --deep: #123d55;
+      --blue: #164e68;
+      --sea: #8fc4d0;
+      --pale: #e5f0ef;
+      --paper: #f6f5ef;
+      --white: #fffefa;
+      --ink: #1f3035;
+      --muted: #68787b;
+      --line: #d9e1dc;
+      --accent: #d3a36e;
+      --serif: "Noto Serif TC", serif;
+      --sans: "DM Sans", "Noto Sans TC", sans-serif;
+      --wrap: min(1160px, calc(100% - 56px));
     }
 
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 20px; }
     body {
       margin: 0;
-      background: var(--cream);
       color: var(--ink);
-      font-family: "Noto Sans TC", sans-serif;
-      font-size: 16px;
-      line-height: 1.7;
+      background: var(--paper);
+      font: 400 15px/1.8 var(--sans);
+      -webkit-font-smoothing: antialiased;
     }
-    a { color: inherit; text-decoration: none; }
-    button, input { font: inherit; }
-    button { cursor: pointer; }
-    :focus-visible { outline: 3px solid var(--sky); outline-offset: 4px; }
-
-    .wrap { width: min(1120px, calc(100% - 48px)); margin-inline: auto; }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; }
+    button, input, select { font: inherit; }
+    button, a, input, select { -webkit-tap-highlight-color: transparent; }
+    :focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
+    .wrap { width: var(--wrap); margin-inline: auto; }
+    .serif, h1, h2, h3 { font-family: var(--serif); }
     .eyebrow {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin: 0 0 18px;
+      margin: 0 0 17px;
       color: var(--blue);
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: .18em;
+      font: 700 10px/1.5 var(--sans);
+      letter-spacing: .19em;
+      text-transform: uppercase;
     }
-    .eyebrow::before { width: 28px; height: 1px; background: currentColor; content: ""; }
+    .eyebrow.light { color: #b9e0e4; }
     .section-title {
       margin: 0;
-      font-family: "Noto Serif TC", serif;
-      font-size: clamp(30px, 4vw, 46px);
-      font-weight: 700;
+      font: 600 clamp(30px, 4vw, 47px)/1.4 var(--serif);
       letter-spacing: .045em;
-      line-height: 1.28;
     }
-    .accent { color: var(--blue); }
-    .section-copy { margin: 18px 0 0; color: var(--muted); }
-    .button, .text-link {
+    .section-copy { color: var(--muted); font-size: 13px; line-height: 1.95; }
+    .button {
+      min-height: 50px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-height: 50px;
-      padding: 11px 23px;
+      gap: 17px;
+      padding: 0 21px;
       border: 1px solid transparent;
-      border-radius: 2px;
-      font-size: 14px;
-      font-weight: 600;
-      letter-spacing: .03em;
-      transition: background-color .25s ease, color .25s ease, border-color .25s ease, transform .25s ease;
+      border-radius: 0;
+      font: 700 12px/1 var(--sans);
+      letter-spacing: .08em;
+      text-decoration: none;
+      transition: color .2s, background-color .2s, border-color .2s, transform .2s;
+      cursor: pointer;
     }
-    .button:hover, .text-link:hover { transform: translateY(-2px); }
-    .button-primary { background: var(--sand); color: var(--navy); }
-    .button-primary:hover { background: #f0ca84; }
-    .button-outline { border-color: rgba(255,255,255,.8); color: #fff; }
-    .button-outline:hover { background: #fff; color: var(--navy); }
+    .button:hover { transform: translateY(-2px); }
+    .button-light { color: var(--deep); background: var(--white); }
+    .button-light:hover { background: var(--pale); }
+    .button-dark { color: #fff; background: var(--deep); }
+    .button-dark:hover { background: var(--blue); }
+    .button-arrow { font-size: 18px; font-weight: 400; transition: transform .2s; }
+    .button:hover .button-arrow { transform: translateX(3px); }
 
-    .site-header {
+    /* Header */
+    .header {
       position: absolute;
-      z-index: 10;
-      top: 0;
-      left: 0;
-      width: 100%;
-      border-bottom: 1px solid rgba(255,255,255,.27);
+      z-index: 5;
+      inset: 0 0 auto;
+      color: #fff;
+      border-bottom: 1px solid rgba(255,255,255,.24);
     }
-    .navbar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      min-height: 78px;
-      gap: 24px;
-    }
-    .brand { display: inline-flex; align-items: center; gap: 10px; color: #fff; }
+    .nav { min-height: 82px; display: flex; align-items: center; justify-content: space-between; gap: 28px; }
+    .brand { display: inline-flex; align-items: center; gap: 12px; color: inherit; text-decoration: none; flex: 0 0 auto; }
     .brand-mark {
-      display: grid;
-      width: 29px;
-      height: 29px;
-      place-items: center;
-      border: 1px solid var(--sky);
-      border-radius: 50%;
-      color: var(--sky);
-      font-family: "Playfair Display", serif;
-      font-size: 17px;
-      line-height: 1;
+      width: 37px; height: 37px; display: grid; place-items: center;
+      color: #d2eef0; border: 1px solid rgba(210,238,240,.65); border-radius: 50%;
+      font: 500 17px/1 var(--serif);
     }
-    .brand-copy { display: grid; line-height: 1.1; }
-    .brand-copy strong { font-size: 14px; font-weight: 600; letter-spacing: .08em; }
-    .brand-copy small { margin-top: 4px; color: var(--sky); font-size: 8px; letter-spacing: .15em; }
-    .nav-links { display: flex; align-items: center; gap: 25px; }
-    .nav-links a { position: relative; color: rgba(255,255,255,.92); font-size: 13px; font-weight: 500; white-space: nowrap; }
-    .nav-links a:not(.nav-cta)::after {
-      position: absolute;
-      right: 0;
-      bottom: -7px;
-      width: 0;
-      height: 1px;
-      background: var(--sky);
-      content: "";
-      transition: width .25s ease;
+    .brand-name { display: flex; flex-direction: column; font: 500 19px/1.3 var(--serif); letter-spacing: .06em; }
+    .brand-name small { margin-top: 3px; font: 600 8px/1.4 var(--sans); letter-spacing: .21em; }
+    .nav-links { display: flex; align-items: center; gap: clamp(22px, 3vw, 42px); }
+    .nav-links > a:not(.nav-book) {
+      position: relative; padding: 9px 0; color: rgba(255,255,255,.9);
+      font-size: 12px; letter-spacing: .08em; text-decoration: none;
     }
-    .nav-links a:not(.nav-cta):hover::after { right: auto; left: 0; width: 100%; }
-    .nav-links .nav-cta { padding: 7px 12px; border: 1px solid rgba(255,255,255,.78); }
-    .nav-links .nav-cta:hover { background: #fff; color: var(--navy); }
-    .menu-toggle { display: none; padding: 4px; border: 0; background: transparent; color: #fff; font-size: 24px; line-height: 1; }
+    .nav-links > a:not(.nav-book)::after {
+      position: absolute; content: ""; inset: auto 0 3px; height: 1px;
+      background: #d2eef0; transform: scaleX(0); transform-origin: left; transition: transform .22s;
+    }
+    .nav-links > a:not(.nav-book):hover::after { transform: scaleX(1); }
+    .nav-book {
+      min-height: 40px; display: inline-flex; align-items: center; padding: 0 17px;
+      border: 1px solid rgba(255,255,255,.62); color: #fff; font-size: 11px;
+      letter-spacing: .1em; text-decoration: none; transition: background .2s, color .2s;
+    }
+    .nav-book:hover { color: var(--deep); background: #fff; }
+    .menu-toggle {
+      display: none; width: 42px; height: 42px; padding: 0; border: 1px solid rgba(255,255,255,.45);
+      color: #fff; background: transparent; font-size: 21px; line-height: 1; cursor: pointer;
+    }
 
+    /* Hero */
     .hero {
-      position: relative;
-      display: flex;
-      min-height: 704px;
-      overflow: hidden;
-      align-items: stretch;
-      background:
-        radial-gradient(circle at 85% 26%, rgba(117,198,232,.35) 0, rgba(117,198,232,.08) 18%, transparent 43%),
-        linear-gradient(135deg, #062742 0%, #062742 58%, #0a4168 100%);
-      color: #fff;
+      position: relative; isolation: isolate; min-height: 740px; display: flex; align-items: center;
+      overflow: hidden; color: #fff; background: var(--deep);
     }
-    .hero::after {
-      position: absolute;
-      z-index: 0;
-      right: -18vw;
-      bottom: -22vw;
-      width: 50vw;
-      height: 50vw;
-      border: 1px solid rgba(117,198,232,.13);
-      border-radius: 50%;
-      content: "";
+    .hero-background { position: absolute; z-index: -2; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 53%; animation: settle 1.2s ease-out both; }
+    .hero::before {
+      position: absolute; z-index: -1; content: ""; inset: 0;
+      background: linear-gradient(90deg, rgba(12,42,57,.79), rgba(14,51,66,.5) 43%, rgba(14,51,66,.06)),
+                  linear-gradient(0deg, rgba(12,42,57,.3), transparent 40%);
     }
-    .hero-grid {
-      position: relative;
-      z-index: 1;
-      display: grid;
-      grid-template-columns: 1.02fr .98fr;
-      gap: 45px;
-      align-items: center;
-      padding-top: 122px;
-      padding-bottom: 72px;
+    .hero-inner {
+      display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(280px, .85fr); align-items: center;
+      gap: clamp(36px, 7vw, 90px); padding-top: 100px; padding-bottom: 120px;
     }
-    .hero-content { max-width: 560px; }
-    .hero .eyebrow { color: var(--sky); }
+    .hero-copy { max-width: 610px; animation: rise .8s .1s both; }
+    .hero .eyebrow { color: #d1e9e9; letter-spacing: .22em; }
     .hero-title {
-      max-width: 540px;
-      margin: 0;
-      font-family: "Noto Serif TC", serif;
-      font-size: clamp(42px, 5.5vw, 68px);
-      font-weight: 700;
-      letter-spacing: .04em;
-      line-height: 1.22;
+      margin: 0; font: 500 clamp(48px, 7vw, 82px)/1.28 var(--serif); letter-spacing: .045em;
     }
-    .hero-title .sky-word { color: var(--sky); }
-    .hero-lede { max-width: 490px; margin: 25px 0 0; color: rgba(255,255,255,.76); }
-    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
-    .hero-meta { margin: 27px 0 0; color: var(--sky); font-size: 10px; font-weight: 700; letter-spacing: .18em; }
-    .scroll-note { display: flex; align-items: center; gap: 10px; margin: 53px 0 0; color: rgba(255,255,255,.55); font-size: 9px; letter-spacing: .18em; }
-    .scroll-note::before { width: 38px; height: 1px; background: rgba(255,255,255,.45); content: ""; }
-
-    .hero-art {
-      position: relative;
-      width: min(100%, 400px);
-      height: 300px;
-      min-height: 0;
-      margin-left: auto;
-      overflow: visible;
-      aspect-ratio: auto;
-      border: 0;
-      background: transparent;
-      box-shadow: none;
+    .hero-title span { display: block; color: #d3e6e3; }
+    .hero-lede { max-width: 400px; margin: 24px 0 29px; color: rgba(255,255,255,.83); font-size: 14px; line-height: 2; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .hero-detail {
+      justify-self: end; width: min(100%, 400px); margin: 34px 0 0; position: relative;
+      animation: rise .9s .25s both;
     }
-    .hero-photo { width: 400px; height: 300px; object-fit: cover; box-shadow: 24px 24px 0 rgba(117,198,232,.13), var(--shadow); }
-    .window-frame { position: absolute; inset: 0; border: 12px solid #e8d4ae; box-shadow: inset 0 0 0 2px rgba(6,39,66,.18); }
-    .window-frame::before, .window-frame::after { position: absolute; background: rgba(6,39,66,.25); content: ""; }
-    .window-frame::before { top: 0; bottom: 0; left: 49%; width: 4px; }
-    .window-frame::after { top: 46%; right: 0; left: 0; height: 4px; }
-    .sun { position: absolute; top: 16%; right: 17%; width: 77px; height: 77px; border-radius: 50%; background: #fff2be; box-shadow: 0 0 45px 22px rgba(255,228,150,.42); }
-    .mountain { position: absolute; bottom: 28%; width: 75%; height: 36%; clip-path: polygon(0 100%, 35% 15%, 48% 50%, 63% 0, 100% 100%); background: #497b83; opacity: .9; }
-    .mountain.one { left: -12%; }
-    .mountain.two { right: -27%; bottom: 27%; background: #30616b; transform: scaleX(-1); opacity: .75; }
-    .tabletop { position: absolute; right: -8%; bottom: -7%; left: -8%; height: 33%; background: linear-gradient(#643e2e 0%, #3d251e 100%); transform: perspective(200px) rotateX(10deg); }
-    .chair { position: absolute; right: 7%; bottom: 18%; width: 100px; height: 112px; border: 12px solid #543126; border-bottom: 0; border-radius: 48px 48px 0 0; opacity: .8; }
-    .chair::after { position: absolute; bottom: -75px; left: 14px; width: 8px; height: 75px; background: #543126; box-shadow: 53px 0 #543126; content: ""; }
-    .coffee-vessel { position: absolute; bottom: 14%; left: 28%; width: 112px; height: 105px; }
-    .coffee-vessel .dripper { position: absolute; top: 0; left: 29px; width: 53px; height: 45px; border: 3px solid #d8e7e1; border-radius: 5px 5px 22px 22px; background: linear-gradient(135deg, rgba(222,246,240,.75), rgba(124,180,181,.2)); clip-path: polygon(0 0, 100% 0, 78% 100%, 22% 100%); }
-    .coffee-vessel .carafe { position: absolute; bottom: 0; left: 17px; width: 78px; height: 68px; border: 3px solid #d8e7e1; border-radius: 10px 10px 23px 23px; background: linear-gradient(to top, rgba(56,29,19,.82) 0 38%, rgba(190,228,227,.24) 39%); }
-    .coffee-vessel .carafe::before { position: absolute; top: -20px; left: 24px; width: 26px; height: 22px; border: 3px solid #d8e7e1; border-bottom: 0; border-radius: 50% 50% 0 0; content: ""; }
-    .steam { position: absolute; bottom: 59%; left: 49%; width: 23px; height: 58px; border-left: 2px solid rgba(255,255,255,.63); border-radius: 50%; transform: rotate(16deg); }
-    .steam::after { position: absolute; top: -5px; left: 14px; width: 18px; height: 48px; border-right: 2px solid rgba(255,255,255,.44); border-radius: 50%; content: ""; }
-    .art-label { position: absolute; z-index: 3; right: -11px; top: 42%; display: grid; gap: 2px; padding: 10px 11px; border-left: 2px solid var(--sand); background: rgba(6,39,66,.86); color: #fff; }
-    .art-label strong { font-family: "Playfair Display", serif; font-size: 22px; line-height: 1; }
-    .art-label span { color: var(--sky); font-size: 9px; letter-spacing: .09em; }
-    .art-label small { color: rgba(255,255,255,.72); font-size: 9px; }
-
-    .story { padding: 115px 0 120px; background: #fff; }
-    .story-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: clamp(45px, 9vw, 105px); align-items: center; }
-    .story-visual { position: relative; min-height: 400px; }
-    .story-seal {
-      display: grid;
-      width: 320px;
-      height: 320px;
-      place-content: center;
-      margin: 0 auto;
-      border: 1px solid var(--sky);
-      border-radius: 50%;
-      background: radial-gradient(circle, #fff 0 55%, #eaf5f7 56% 60%, #fff 61%);
-      color: var(--navy);
-      text-align: center;
+    .hero-detail img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border: 7px solid rgba(255,255,255,.88); box-shadow: 0 18px 55px rgba(4,25,35,.28); }
+    .hero-detail figcaption {
+      display: flex; align-items: center; justify-content: space-between; gap: 14px;
+      padding: 10px 13px; background: var(--white); color: var(--deep);
     }
-    .story-seal::before { display: block; margin-bottom: 14px; color: var(--blue); content: "B"; font-family: "Playfair Display", serif; font-size: 73px; line-height: 1; }
-    .story-seal strong { font-family: "Noto Serif TC", serif; font-size: 18px; letter-spacing: .09em; }
-    .story-seal span { margin-top: 10px; color: var(--blue); font-size: 9px; font-weight: 700; letter-spacing: .15em; }
-    .note-card { position: absolute; right: 0; bottom: 0; width: min(225px, 57%); padding: 25px; background: var(--navy); color: #fff; box-shadow: var(--shadow); }
-    .note-card p:first-child { margin: 0; color: var(--sky); font-size: 10px; font-weight: 700; letter-spacing: .16em; }
-    .note-card p:last-child { margin: 12px 0 0; font-family: "Noto Serif TC", serif; font-size: 16px; line-height: 1.65; }
-    .story-content p { margin: 19px 0 0; color: var(--muted); }
-    .story-content p + p { margin-top: 15px; }
-    .underlined-link { display: inline-flex; margin-top: 27px; padding-bottom: 5px; border-bottom: 1px solid var(--blue); color: var(--blue); font-size: 14px; font-weight: 600; transition: gap .2s ease; }
-    .underlined-link:hover { gap: 8px; }
-
-    .coffee { padding: 112px 0 120px; background: var(--mist); }
-    .coffee-heading { display: flex; align-items: end; justify-content: space-between; gap: 32px; margin-bottom: 43px; }
-    .coffee-heading .section-copy { max-width: 365px; }
-    .coffee-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 19px; }
-    .coffee-card {
-      position: relative;
-      display: flex;
-      min-height: 384px;
-      overflow: hidden;
-      flex-direction: column;
-      padding: 31px 29px 25px;
-      background: var(--navy);
-      color: #fff;
-      box-shadow: var(--shadow);
+    .hero-detail figcaption strong { font: 500 13px/1.4 var(--serif); letter-spacing: .08em; }
+    .hero-detail figcaption span { font: 600 8px/1.4 var(--sans); letter-spacing: .14em; }
+    .hero-foot {
+      position: absolute; left: max(28px, calc((100% - 1160px) / 2)); right: max(28px, calc((100% - 1160px) / 2)); bottom: 32px;
+      display: flex; align-items: center; justify-content: space-between; pointer-events: none;
     }
-    .coffee-card:nth-child(2) { background: #106396; }
-    .coffee-card:nth-child(3) { background: #164c68; }
-    .coffee-card::after { position: absolute; right: -73px; bottom: -90px; width: 230px; height: 230px; border: 25px solid rgba(117,198,232,.15); border-radius: 50%; content: ""; }
-    .coffee-card > * { position: relative; z-index: 1; }
-    .bean-no { margin: 0; color: var(--sky); font-family: "Playfair Display", serif; font-size: 14px; font-weight: 600; letter-spacing: .11em; }
-    .origin { margin: 19px 0 5px; color: rgba(255,255,255,.67); font-size: 10px; font-weight: 700; letter-spacing: .13em; }
-    .bean-name { margin: 0; font-family: "Noto Serif TC", serif; font-size: 24px; font-weight: 700; letter-spacing: .04em; line-height: 1.35; }
-    .flavour { margin: 14px 0 0; color: rgba(255,255,255,.79); font-size: 14px; }
-    .coffee-bottom { display: flex; align-items: center; justify-content: space-between; gap: 13px; margin-top: auto; padding-top: 23px; border-top: 1px solid rgba(255,255,255,.22); }
-    .price { font-family: "Playfair Display", serif; font-size: 14px; white-space: nowrap; }
-    .save-button { padding: 5px 0; border: 0; background: transparent; color: #fff; font-size: 13px; font-weight: 600; white-space: nowrap; transition: color .2s ease; }
-    .save-button:hover { color: var(--sand); }
+    .hero-location { display: flex; align-items: center; gap: 12px; color: rgba(255,255,255,.8); font: 600 9px/1.5 var(--sans); letter-spacing: .17em; }
+    .hero-location::before { width: 20px; height: 1px; content: ""; background: var(--sea); }
+    .scroll-cue { color: rgba(255,255,255,.72); font: 600 8px/1.8 var(--sans); letter-spacing: .16em; writing-mode: vertical-rl; }
 
-    .brew { padding: 115px 0 120px; background: #fff; }
-    .brew-grid { display: grid; grid-template-columns: .93fr 1.07fr; gap: clamp(44px, 7vw, 90px); align-items: center; }
-    .brew-art { position: relative; min-height: 448px; overflow: hidden; background: linear-gradient(138deg, #eef9fa 0 50%, #d6edf3 50% 100%); }
-    .brew-art::before { position: absolute; top: 33px; left: 30px; width: 70px; height: 35px; border-top: 1px solid var(--sky); border-left: 1px solid var(--sky); content: ""; }
-    .brew-art::after { position: absolute; top: 49px; left: 46px; width: 70px; height: 35px; border-top: 1px solid var(--sky); border-left: 1px solid var(--sky); content: ""; }
-    .pour-rings { position: absolute; top: 50%; left: 50%; width: 238px; height: 238px; border: 1px solid rgba(12,91,149,.35); border-radius: 50%; transform: translate(-50%,-46%); }
-    .pour-rings::before, .pour-rings::after { position: absolute; border: 1px solid rgba(12,91,149,.28); border-radius: 50%; content: ""; }
-    .pour-rings::before { inset: 27px; }
-    .pour-rings::after { inset: 57px; }
-    .pour-line { position: absolute; top: 39px; left: 50%; width: 1px; height: 140px; background: var(--blue); transform: rotate(24deg); transform-origin: bottom; }
-    .v60 { position: absolute; top: 50%; left: 50%; width: 140px; height: 105px; border: 3px solid var(--navy); border-top-width: 4px; background: rgba(255,255,255,.7); clip-path: polygon(0 0, 100% 0, 74% 100%, 26% 100%); transform: translate(-50%,-33%); }
-    .v60::after { position: absolute; bottom: -61px; left: 35px; width: 64px; height: 58px; border: 3px solid var(--navy); border-radius: 8px 8px 19px 19px; background: linear-gradient(to top, #6c3924 0 31%, rgba(255,255,255,.5) 32%); content: ""; }
-    .brew-caption { position: absolute; right: 27px; bottom: 25px; display: grid; color: var(--navy); text-align: right; }
-    .brew-caption strong { font-family: "Playfair Display", serif; font-size: 21px; letter-spacing: .05em; }
-    .brew-caption span { font-size: 10px; font-weight: 700; letter-spacing: .12em; }
-    .brew-content .section-copy { max-width: 530px; }
-    .brew-steps { margin-top: 28px; border-top: 1px solid var(--line); }
-    .brew-step { display: grid; grid-template-columns: 55px 1fr; gap: 14px; padding: 19px 0; border-bottom: 1px solid var(--line); }
-    .step-no { color: var(--blue); font-family: "Playfair Display", serif; font-size: 25px; font-weight: 600; line-height: 1; }
-    .brew-step h3 { margin: 0; font-family: "Noto Serif TC", serif; font-size: 17px; letter-spacing: .03em; }
-    .brew-step p { margin: 5px 0 0; color: var(--muted); font-size: 14px; }
+    /* Welcome */
+    .welcome { padding: 112px 0 125px; background: var(--white); }
+    .welcome-grid { display: grid; grid-template-columns: .8fr 1.2fr; align-items: center; gap: clamp(50px, 10vw, 145px); }
+    .welcome-visual { position: relative; width: 100%; max-width: 410px; padding: 0 35px 45px 0; }
+    .welcome-visual > img { width: 100%; height: 440px; object-fit: cover; }
+    .welcome-note {
+      position: absolute; right: 0; bottom: 0; width: 210px; min-height: 148px; padding: 22px 24px;
+      color: #fff; background: var(--blue); box-shadow: 0 12px 28px rgba(18,61,85,.14);
+    }
+    .welcome-note strong { display: block; margin-bottom: 9px; color: #c4e3e3; font: 500 24px/1.5 var(--serif); letter-spacing: .04em; }
+    .welcome-note p { margin: 0; color: rgba(255,255,255,.83); font-size: 11px; line-height: 1.8; }
+    .welcome-copy { max-width: 565px; }
+    .welcome-copy h2 { margin-bottom: 22px; }
+    .welcome-copy h2 em { color: var(--blue); font-style: normal; }
+    .welcome-copy > p:not(.eyebrow) { max-width: 520px; margin: 0 0 14px; color: var(--muted); font-size: 14px; line-height: 2; }
+    .text-link { display: inline-flex; align-items: center; gap: 12px; margin-top: 15px; color: var(--blue); font-size: 12px; font-weight: 700; letter-spacing: .06em; text-decoration: none; }
+    .text-link span { display: inline-block; font-size: 16px; transition: transform .2s; }
+    .text-link:hover span { transform: translate(3px, -3px); }
+    .text-link::after { position: absolute; }
+    .text-link { border-bottom: 1px solid rgba(22,78,104,.35); padding-bottom: 5px; }
 
-    .visit { position: relative; overflow: hidden; padding: 116px 0; background: var(--navy); color: #fff; text-align: center; }
-    .visit::before, .visit::after { position: absolute; width: 380px; height: 380px; border: 1px solid rgba(117,198,232,.19); border-radius: 50%; content: ""; }
-    .visit::before { top: -250px; left: -145px; }
-    .visit::after { right: -165px; bottom: -260px; width: 450px; height: 450px; border-width: 22px; opacity: .45; }
-    .visit .wrap { position: relative; z-index: 1; max-width: 730px; }
-    .visit .eyebrow { justify-content: center; color: var(--sky); }
-    .visit .section-title { max-width: 670px; margin-inline: auto; }
-    .visit .section-copy { max-width: 535px; margin-inline: auto; color: rgba(255,255,255,.72); }
-    .subscribe-form { display: flex; margin: 34px auto 0; padding: 5px; border: 1px solid rgba(255,255,255,.58); }
-    .subscribe-form input { min-width: 0; flex: 1; padding: 11px 15px; border: 0; outline: 0; background: transparent; color: #fff; }
-    .subscribe-form input::placeholder { color: rgba(255,255,255,.58); }
-    .subscribe-form button { min-height: 48px; padding: 10px 20px; border: 0; border-radius: 1px; background: var(--sand); color: var(--navy); font-size: 14px; font-weight: 700; transition: background .2s ease; }
-    .subscribe-form button:hover { background: #f1ca83; }
+    /* Rooms */
+    .stay { padding: 105px 0 115px; background: var(--pale); }
+    .stay-heading { display: flex; align-items: end; justify-content: space-between; gap: 35px; margin-bottom: 42px; }
+    .stay-heading .section-copy { max-width: 330px; margin: 0 0 5px; }
+    .rooms { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+    .room { background: var(--white); box-shadow: 0 8px 26px rgba(20,55,64,.045); }
+    .room-image-wrap { position: relative; overflow: hidden; aspect-ratio: 1.57; background: #c9d9d8; }
+    .room-image-wrap img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s ease; }
+    .room:hover .room-image-wrap img { transform: scale(1.035); }
+    .room-index { position: absolute; right: 17px; bottom: 15px; color: #fff; font: 600 9px/1.5 var(--sans); letter-spacing: .17em; text-shadow: 0 1px 8px rgba(0,0,0,.5); }
+    .room-info { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 21px 24px 24px; }
+    .room-info h3 { margin: 0 0 4px; color: var(--ink); font: 600 21px/1.5 var(--serif); letter-spacing: .04em; }
+    .room-info p { margin: 0; color: var(--muted); font-size: 12px; }
+    .room-meta { flex: 0 0 auto; color: var(--blue); font: 700 9px/1.6 var(--sans); letter-spacing: .14em; text-align: right; }
 
-    .site-footer { padding: 65px 0 25px; background: #031c31; color: rgba(255,255,255,.68); }
-    .footer-grid { display: grid; grid-template-columns: 1.45fr .75fr .9fr; gap: 54px; padding-bottom: 46px; }
-    .footer-brand .brand { margin-bottom: 18px; }
-    .footer-brand p { max-width: 355px; margin: 0; font-size: 14px; }
-    .footer-heading { margin: 3px 0 17px; color: var(--sky); font-size: 11px; font-weight: 700; letter-spacing: .15em; }
-    .footer-links, .footer-contact { display: grid; gap: 10px; font-size: 14px; }
-    .footer-links a:hover, .footer-contact a:hover { color: #fff; }
-    .footer-bottom { display: flex; justify-content: space-between; gap: 18px; padding-top: 22px; border-top: 1px solid rgba(255,255,255,.17); color: rgba(255,255,255,.47); font-size: 10px; letter-spacing: .1em; }
+    /* Moments */
+    .moments { min-height: 510px; display: grid; grid-template-columns: 1fr 1fr; color: #fff; background: var(--deep); }
+    .moments-photo { min-height: 510px; overflow: hidden; }
+    .moments-photo img { width: 100%; height: 100%; min-height: 510px; object-fit: cover; }
+    .moments-copy { display: flex; flex-direction: column; justify-content: center; padding: 70px clamp(40px, 8vw, 110px); }
+    .moments-copy .section-title { max-width: 540px; }
+    .moments-copy > p:not(.eyebrow) { max-width: 470px; margin: 17px 0 28px; color: rgba(255,255,255,.73); font-size: 13px; line-height: 2; }
+    .features { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: 1px solid rgba(255,255,255,.2); }
+    .feature { display: flex; align-items: center; gap: 11px; min-height: 62px; border-bottom: 1px solid rgba(255,255,255,.2); color: rgba(255,255,255,.84); font-size: 11px; }
+    .feature:nth-child(odd) { padding-right: 12px; }
+    .feature:nth-child(even) { padding-left: 12px; }
+    .feature-mark { width: 24px; height: 24px; flex: 0 0 24px; display: grid; place-items: center; border: 1px solid rgba(184,222,226,.58); border-radius: 50%; color: #b8dee2; font: 500 11px/1 var(--serif); }
 
+    /* Contact */
+    .contact { padding: 100px 0 110px; background: var(--white); }
+    .contact-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, .9fr); align-items: start; gap: clamp(40px, 9vw, 120px); }
+    .contact-copy { padding-top: 13px; }
+    .contact-copy .section-title { max-width: 510px; }
+    .contact-copy > p:not(.eyebrow) { max-width: 440px; margin: 20px 0 0; color: var(--muted); font-size: 14px; line-height: 2; }
+    .contact-note { display: flex; gap: 11px; align-items: flex-start; margin-top: 36px; color: var(--muted); font-size: 11px; }
+    .contact-note::before { content: ""; width: 20px; height: 1px; margin-top: 11px; flex: 0 0 20px; background: var(--sea); }
+    .booking-panel { padding: 28px; border-top: 3px solid var(--blue); background: var(--paper); }
+    .booking-panel h3 { margin: 0; font: 600 23px/1.5 var(--serif); letter-spacing: .04em; }
+    .booking-panel > p { margin: 5px 0 22px; color: var(--muted); font-size: 11px; }
+    .booking-fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 15px 13px; }
+    .field { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+    .field-wide { grid-column: 1 / -1; }
+    .field label { color: #53676b; font-size: 11px; font-weight: 600; letter-spacing: .04em; }
+    .field input, .field select { width: 100%; height: 43px; padding: 0 10px; border: 1px solid var(--line); border-radius: 0; color: var(--ink); background: #fff; font-size: 12px; }
+    .field input:focus, .field select:focus { border-color: var(--blue); outline: 2px solid rgba(22,78,104,.14); outline-offset: 1px; }
+    .booking-submit { width: 100%; margin-top: 17px; }
+    .form-hint { margin: 12px 0 0; color: var(--muted); font-size: 10px; text-align: center; }
+
+    /* Footer and toast */
+    .footer { padding: 52px 0 20px; color: rgba(255,255,255,.7); background: #102f40; }
+    .footer-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 40px; padding-bottom: 38px; }
+    .footer-brand { max-width: 365px; }
+    .footer .brand { color: #fff; }
+    .footer .brand-mark { border-color: rgba(210,238,240,.45); }
+    .footer-brand p { max-width: 330px; margin: 17px 0 0; color: rgba(255,255,255,.62); font-size: 12px; line-height: 1.9; }
+    .footer-nav { display: flex; flex-wrap: wrap; gap: 14px 30px; padding-top: 12px; }
+    .footer-nav a { color: rgba(255,255,255,.8); font-size: 11px; text-decoration: none; transition: color .2s; }
+    .footer-nav a:hover { color: #d2eef0; }
+    .footer-bottom { display: flex; justify-content: space-between; gap: 18px; padding-top: 17px; border-top: 1px solid rgba(255,255,255,.15); font-size: 9px; }
+    .footer-motto { color: rgba(255,255,255,.45); letter-spacing: .08em; }
     .toast {
-      position: fixed;
-      z-index: 20;
-      right: 22px;
-      bottom: 22px;
-      max-width: min(360px, calc(100% - 44px));
-      padding: 13px 18px;
-      border-left: 3px solid var(--sand);
-      background: var(--navy);
-      box-shadow: var(--shadow);
-      color: #fff;
-      font-size: 14px;
-      opacity: 0;
-      pointer-events: none;
-      transform: translateY(12px);
-      transition: opacity .22s ease, transform .22s ease;
+      position: fixed; z-index: 10; right: 22px; bottom: 22px; width: min(360px, calc(100% - 44px));
+      padding: 15px 18px; border-left: 3px solid var(--accent); color: #fff; background: var(--deep);
+      box-shadow: 0 10px 30px rgba(12,42,57,.2); font-size: 12px; line-height: 1.75;
+      opacity: 0; pointer-events: none; transform: translateY(10px); transition: opacity .25s, transform .25s;
     }
     .toast.show { opacity: 1; transform: translateY(0); }
-    .reveal { opacity: 0; transform: translateY(18px); transition: opacity .65s ease, transform .65s ease; }
-    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal.visible { opacity: 1; transform: none; }
 
-    @media (max-width: 820px) {
-      .navbar { position: relative; }
+    @keyframes settle { from { transform: scale(1.035); } to { transform: scale(1); } }
+    @keyframes rise { from { opacity: 0; transform: translateY(17px); } to { opacity: 1; transform: translateY(0); } }
+
+    @media (max-width: 800px) {
+      :root { --wrap: min(100% - 40px, 1160px); }
+      .nav { min-height: 72px; }
       .menu-toggle { display: block; }
       .nav-links {
-        position: absolute;
-        top: 100%;
-        right: -24px;
-        left: -24px;
-        display: grid;
-        max-height: 0;
-        overflow: hidden;
-        gap: 0;
-        background: #05233c;
-        transition: max-height .32s ease;
+        position: absolute; top: 72px; left: 0; right: 0; display: flex; flex-direction: column; align-items: stretch; gap: 0;
+        max-height: 0; overflow: hidden; padding: 0 20px; background: var(--deep); transition: max-height .3s ease, padding .3s ease;
       }
-      .nav-links.open { max-height: 300px; }
-      .nav-links a { padding: 12px 24px; border-top: 1px solid rgba(255,255,255,.1); }
-      .nav-links .nav-cta { margin: 8px 24px 16px; padding: 9px 12px; text-align: center; }
-      .hero { min-height: 710px; }
-      .hero-grid { grid-template-columns: 1fr; gap: 17px; padding-top: 112px; }
-      .hero-content { max-width: 640px; }
-      .scroll-note { margin-top: 29px; }
-      .hero-art { width: min(100%, 330px); height: 248px; min-height: 0; max-height: none; margin: 0; }
-      .hero-photo { width: 330px; height: 248px; }
-      .coffee-grid { grid-template-columns: repeat(2, 1fr); }
-      .coffee-card:nth-child(3) { grid-column: span 2; }
-      .story-grid, .brew-grid { grid-template-columns: 1fr; }
-      .story-visual { max-width: 520px; width: 100%; margin: auto; }
-      .brew-art { max-width: 540px; width: 100%; margin: auto; }
-      .footer-grid { grid-template-columns: 1fr 1fr; }
-      .footer-brand { grid-column: 1 / -1; }
+      .nav-links.open { max-height: 290px; padding: 10px 20px 18px; }
+      .nav-links > a:not(.nav-book) { padding: 11px 4px; }
+      .nav-book { justify-content: center; margin-top: 8px; }
+      .hero { min-height: 740px; }
+      .hero-inner { grid-template-columns: minmax(0, 1.1fr) minmax(220px, .9fr); gap: 26px; }
+      .hero-detail { margin-top: 48px; }
+      .welcome-grid { grid-template-columns: .9fr 1.1fr; gap: 42px; }
+      .welcome-visual { padding: 0 25px 35px 0; }
+      .welcome-visual > img { height: 285px; }
+      .welcome-note { width: 175px; min-height: 125px; padding: 17px; }
+      .welcome-note strong { font-size: 20px; }
+      .moments { min-height: 440px; }
+      .moments-photo, .moments-photo img { min-height: 440px; }
+      .moments-copy { padding: 50px 35px; }
+      .contact-grid { gap: 35px; }
     }
 
-    @media (max-width: 560px) {
-      .wrap { width: calc(100% - 34px); }
-      .navbar { min-height: 70px; }
-      .brand-copy strong { font-size: 13px; }
-      .hero { min-height: 680px; }
-      .hero-grid { padding-top: 98px; padding-bottom: 34px; }
-      .hero-title { font-size: 40px; }
-      .hero-lede { margin-top: 16px; font-size: 14px; line-height: 1.7; }
-      .hero-actions { margin-top: 23px; }
-      .hero-actions .button { flex: 1; padding-inline: 13px; }
-      .hero-meta { margin-top: 18px; }
-      .hero-art { width: 260px; height: 195px; min-height: 0; max-height: none; }
-      .hero-photo { width: 260px; height: 195px; }
-      .art-label { display: none; }
-      .sun { width: 49px; height: 49px; }
-      .coffee-vessel { bottom: 9%; left: 25%; transform: scale(.72); transform-origin: bottom left; }
-      .chair { transform: scale(.72); transform-origin: bottom right; }
-      .story, .coffee, .brew, .visit { padding: 76px 0; }
-      .story-seal { width: 245px; height: 245px; }
-      .story-seal::before { margin-bottom: 8px; font-size: 54px; }
-      .story-seal strong { font-size: 15px; }
-      .story-visual { min-height: 315px; }
-      .note-card { width: 185px; padding: 18px; }
-      .note-card p:last-child { font-size: 14px; }
-      .coffee-heading { display: block; margin-bottom: 30px; }
-      .coffee-heading .section-copy { margin-top: 14px; }
-      .coffee-grid { grid-template-columns: 1fr; }
-      .coffee-card, .coffee-card:nth-child(3) { min-height: 330px; grid-column: auto; }
-      .brew-art { min-height: 310px; }
-      .pour-rings { width: 185px; height: 185px; }
-      .v60 { transform: translate(-50%,-28%) scale(.82); }
-      .subscribe-form { display: grid; gap: 6px; padding: 5px; }
-      .subscribe-form input, .subscribe-form button { width: 100%; }
-      .footer-grid { grid-template-columns: 1fr; gap: 32px; }
-      .footer-brand { grid-column: auto; }
-      .footer-bottom { display: grid; gap: 9px; }
+    @media (max-width: 600px) {
+      :root { --wrap: min(100% - 36px, 1160px); }
+      .nav { min-height: 72px; }
+      .hero { min-height: 690px; align-items: end; }
+      .hero-inner { display: block; padding-top: 132px; padding-bottom: 112px; }
+      .hero-title { font-size: clamp(44px, 13vw, 62px); }
+      .hero-lede { max-width: 360px; font-size: 13px; }
+      .hero-detail { display: none; }
+      .hero-foot { left: 18px; right: 18px; bottom: 25px; }
+      .hero-location { font-size: 8px; }
+      .scroll-cue { display: none; }
+      .welcome, .stay, .contact { padding: 76px 0; }
+      .welcome-grid, .rooms, .contact-grid { grid-template-columns: 1fr; gap: 43px; }
+      .welcome-visual { width: min(100%, 390px); padding-right: 28px; }
+      .welcome-visual > img { height: min(88vw, 420px); }
+      .welcome-copy > p:not(.eyebrow) { font-size: 13px; }
+      .stay-heading { display: block; margin-bottom: 30px; }
+      .stay-heading .section-copy { margin-top: 14px; }
+      .rooms { gap: 18px; }
+      .room-image-wrap { aspect-ratio: 1.45; }
+      .room-info { padding: 18px; }
+      .room-info h3 { font-size: 19px; }
+      .room-info p { font-size: 11px; }
+      .room-meta { font-size: 8px; }
+      .moments { display: block; min-height: 0; }
+      .moments-photo { height: clamp(300px, 80vw, 370px); min-height: 0; }
+      .moments-photo img { height: 100%; min-height: 0; }
+      .moments-copy { padding: 62px 24px 68px; }
+      .moments-copy > p:not(.eyebrow) { font-size: 12px; }
+      .feature { font-size: 11px; }
+      .booking-panel { padding: 22px 18px; }
+      .footer-top { display: block; padding-bottom: 28px; }
+      .footer-nav { gap: 12px 20px; padding-top: 24px; }
+      .footer-bottom { display: grid; gap: 8px; }
+      .footer-motto { font-size: 8px; }
+      .toast { right: 18px; bottom: 18px; width: calc(100% - 36px); }
     }
 
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
-      *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
+      *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
       .reveal { opacity: 1; transform: none; }
     }
   </style>
 </head>
 <body>
-  <header class="site-header" id="top">
-    <nav class="wrap navbar" aria-label="主要導覽">
-      <a class="brand" href="#top" aria-label="回到藍天咖啡首頁">
-        <span class="brand-mark" aria-hidden="true">B</span>
-        <span class="brand-copy"><strong>藍天咖啡</strong><small>BLUE SKY COFFEE</small></span>
+  <header class="header" id="top">
+    <nav class="nav wrap" aria-label="主要導覽">
+      <a class="brand" href="#top" aria-label="露天飯店首頁">
+        <span class="brand-mark" aria-hidden="true">露</span>
+        <span class="brand-name">露天飯店<small>OPEN SKY HOTEL</small></span>
       </a>
-      <button class="menu-toggle" type="button" aria-controls="navLinks" aria-expanded="false" aria-label="開啟導覽選單">☰</button>
+      <button class="menu-toggle" type="button" aria-label="開啟導覽選單" aria-expanded="false" aria-controls="navLinks">☰</button>
       <div class="nav-links" id="navLinks">
-        <a href="#story">我們的故事</a>
-        <a href="#coffee">本季選豆</a>
-        <a href="#brew">沖煮日常</a>
-        <a class="nav-cta" href="#visit">訂閱風味通信</a>
+        <a href="#about">認識露天</a>
+        <a href="#rooms">住宿空間</a>
+        <a href="#experience">自在時光</a>
+        <a class="nav-book" href="#contact">住房洽詢</a>
       </div>
     </nav>
   </header>
 
   <main>
     <section class="hero" aria-labelledby="heroTitle">
-      <div class="wrap hero-grid">
-        <div class="hero-content">
-          <p class="eyebrow">HAND BREWED · SLOWLY ROASTED</p>
-          <h1 class="hero-title" id="heroTitle">讓風味，在<span class="sky-word">藍天</span>下慢慢抵達。</h1>
-          <p class="hero-lede">藍天咖啡為喜歡手沖的您，挑選值得細品的單一產區咖啡豆。從第一縷花香，到最後一口回甘，每一杯都有屬於自己的晴朗天氣。</p>
+      <img class="hero-background" src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&amp;fit=crop&amp;w=2200&amp;q=85" alt="依山而建的旅宿與清澈泳池景色" fetchpriority="high">
+      <div class="hero-inner wrap">
+        <div class="hero-copy">
+          <p class="eyebrow">A PLACE TO BREATHE · OPEN SKY HOTEL</p>
+          <h1 class="hero-title" id="heroTitle">把日子，<span>住進風景裡。</span></h1>
+          <p class="hero-lede">為旅遊、出差與每一段短暫停留，留一處自在舒適的所在。推開門，讓自然的光與風，陪你慢下來。</p>
           <div class="hero-actions">
-            <a class="button button-primary" href="#coffee">探索本季咖啡豆 →</a>
-            <a class="button button-outline" href="#story">認識藍天</a>
+            <a class="button button-light" href="#about">遇見露天飯店 <span class="button-arrow" aria-hidden="true">→</span></a>
           </div>
-          <p class="hero-meta">TAIPEI · TAIWAN · EST. 2025</p>
-          <p class="scroll-note">SCROLL TO DISCOVER</p>
         </div>
+        <figure class="hero-detail">
+          <img src="images/hero.jpg" width="400" height="300" alt="窗外山景映入客房的閱讀與休憩空間">
+          <figcaption><strong>把風景，留給此刻。</strong><span>A ROOM WITH A VIEW</span></figcaption>
+        </figure>
+      </div>
+      <div class="hero-foot" aria-hidden="true">
+        <span class="hero-location">A LITTLE CLOSER TO NATURE</span>
+        <span class="scroll-cue">SCROLL TO DISCOVER　↓</span>
+      </div>
+    </section>
 
-        <div class="hero-art" aria-hidden="true">
-          <img class="hero-photo" src="images/hero.jpg" width="400" height="300" alt="">
-          <span class="art-label"><strong>92°C</strong><span>理想水溫</span><small>細細喚醒香氣</small></span>
+    <section class="welcome" id="about" aria-labelledby="aboutTitle">
+      <div class="wrap welcome-grid">
+        <div class="welcome-visual reveal">
+          <img src="https://images.unsplash.com/photo-1602002418082-a4443e081dd1?auto=format&amp;fit=crop&amp;w=1100&amp;q=82" alt="飯店客房通透明亮，窗外映入自然綠意" loading="lazy">
+          <div class="welcome-note"><strong>留白，剛剛好。</strong><p>在舒適與自然之間，找回自己的步調。</p></div>
+        </div>
+        <div class="welcome-copy reveal">
+          <p class="eyebrow">WELCOME TO OPEN SKY</p>
+          <h2 class="section-title" id="aboutTitle">讓每一趟旅程，<br>都有一處<em>安心停靠</em>。</h2>
+          <p>露天飯店為旅人準備一個簡單、舒適的落腳處。無論是安排一趟旅行、短暫出差，或只是想離開熟悉的日常，都能在這裡自在休息。</p>
+          <p>我們相信，好的住宿不必繁複。清爽的空間、自然的光線，和恰到好處的照顧，讓你把心思留給旅程本身。</p>
+          <a class="text-link" href="#rooms">看看住宿空間 <span aria-hidden="true">↗</span></a>
         </div>
       </div>
     </section>
 
-    <section class="story" id="story" aria-labelledby="storyTitle">
-      <div class="wrap story-grid">
-        <div class="story-visual reveal" aria-hidden="true">
-          <div class="story-seal"><strong>慢一點，<br>更清楚。</strong><span>LET THE FLAVOUR SPEAK</span></div>
-          <div class="note-card"><p>BLUE SKY NOTE</p><p>一杯好咖啡，從來不是匆忙完成的事。</p></div>
-        </div>
-        <div class="story-content reveal">
-          <p class="eyebrow">OUR PHILOSOPHY</p>
-          <h2 class="section-title" id="storyTitle">在一杯之間，看見產地的<span class="accent">晴朗</span>。</h2>
-          <p>我們相信，精品咖啡的美好不該被複雜掩蓋。以小批次烘焙留住豆子的個性，再用穩定、誠實的手沖，讓風土與時間在杯中變得清晰。</p>
-          <p>給懂得放慢腳步的人，也給每一個想重新認識咖啡的人。</p>
-          <a class="underlined-link" href="#brew">看看我們如何沖煮 →</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="coffee" id="coffee" aria-labelledby="coffeeTitle">
+    <section class="stay" id="rooms" aria-labelledby="roomsTitle">
       <div class="wrap">
-        <div class="coffee-heading reveal">
-          <div>
-            <p class="eyebrow">SEASONAL SELECTION</p>
-            <h2 class="section-title" id="coffeeTitle">今天，想喝哪一片<span class="accent">藍天</span>？</h2>
-          </div>
-          <p class="section-copy">三款當季單品，為不同的晨光、午後與靜夜而選。</p>
+        <div class="stay-heading reveal">
+          <div><p class="eyebrow">ROOMS &amp; REST</p><h2 class="section-title" id="roomsTitle">為好好休息，<br>準備一方天地。</h2></div>
+          <p class="section-copy">簡約而舒心的住宿空間，讓旅途中的每個夜晚，都回到自在的節奏。</p>
         </div>
-        <div class="coffee-grid">
-          <article class="coffee-card reveal">
-            <p class="bean-no">01 / BRIGHT</p>
-            <p class="origin">ETHIOPIA · YIRGACHEFFE</p>
-            <h3 class="bean-name">衣索比亞・耶加雪菲</h3>
-            <p class="flavour">白花、佛手柑、蜂蜜</p>
-            <div class="coffee-bottom"><span class="price">NT$ 520 / 200g</span><button class="save-button" type="button" data-coffee="衣索比亞・耶加雪菲">加入收藏 ＋</button></div>
+        <div class="rooms">
+          <article class="room reveal">
+            <div class="room-image-wrap">
+              <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&amp;fit=crop&amp;w=1200&amp;q=82" alt="以自然材質與柔和色調布置的寬敞客房" loading="lazy">
+              <span class="room-index">STAY / 01</span>
+            </div>
+            <div class="room-info"><div><h3>日光客房</h3><p>柔和採光，安放一夜好眠。</p></div><span class="room-meta">REST · RELAX</span></div>
           </article>
-          <article class="coffee-card reveal">
-            <p class="bean-no">02 / JUICY</p>
-            <p class="origin">KENYA · KIRINYAGA</p>
-            <h3 class="bean-name">肯亞・祈安布</h3>
-            <p class="flavour">黑醋栗、洛神、葡萄柚</p>
-            <div class="coffee-bottom"><span class="price">NT$ 580 / 200g</span><button class="save-button" type="button" data-coffee="肯亞・祈安布">加入收藏 ＋</button></div>
-          </article>
-          <article class="coffee-card reveal">
-            <p class="bean-no">03 / ROUND</p>
-            <p class="origin">COLOMBIA · HUILA</p>
-            <h3 class="bean-name">哥倫比亞・慧蘭</h3>
-            <p class="flavour">黃桃、焦糖、可可尾韻</p>
-            <div class="coffee-bottom"><span class="price">NT$ 460 / 200g</span><button class="save-button" type="button" data-coffee="哥倫比亞・慧蘭">加入收藏 ＋</button></div>
+          <article class="room reveal">
+            <div class="room-image-wrap">
+              <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&amp;fit=crop&amp;w=1200&amp;q=82" alt="開闊窗景與舒適座椅構成的休憩空間" loading="lazy">
+              <span class="room-index">STAY / 02</span>
+            </div>
+            <div class="room-info"><div><h3>景觀套房</h3><p>多一點空間，收藏窗外風景。</p></div><span class="room-meta">SPACE · VIEW</span></div>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="brew" id="brew" aria-labelledby="brewTitle">
-      <div class="wrap brew-grid">
-        <div class="brew-art reveal" aria-hidden="true">
-          <span class="pour-rings"></span><span class="pour-line"></span><span class="v60"></span>
-          <span class="brew-caption"><strong>2'45''</strong><span>V60 / 15G : 240ML</span></span>
-        </div>
-        <div class="brew-content reveal">
-          <p class="eyebrow">A QUIET RITUAL</p>
-          <h2 class="section-title" id="brewTitle">把時間交給水，讓咖啡說<span class="accent">自己的話</span>。</h2>
-          <p class="section-copy">不需要繁複儀式，只要三個安靜的步驟。每一個參數，都是為了讓你更靠近豆子原本的樣子。</p>
-          <div class="brew-steps">
-            <div class="brew-step"><span class="step-no">01</span><div><h3>研磨，先聞見期待</h3><p>15g 中細研磨，讓香氣從指尖開始展開。</p></div></div>
-            <div class="brew-step"><span class="step-no">02</span><div><h3>悶蒸，等待第一個呼吸</h3><p>以 92°C 熱水浸潤 30 秒，喚醒甜感與層次。</p></div></div>
-            <div class="brew-step"><span class="step-no">03</span><div><h3>注水，保持自己的節奏</h3><p>穩定畫圈，讓 240ml 的清澈在 2 分 45 秒完成。</p></div></div>
-          </div>
+    <section class="moments" id="experience" aria-labelledby="experienceTitle">
+      <div class="moments-photo reveal"><img src="https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&amp;fit=crop&amp;w=1400&amp;q=84" alt="飯店戶外水景與周圍的自然景色" loading="lazy"></div>
+      <div class="moments-copy reveal">
+        <p class="eyebrow light">SLOW DOWN, FEEL MORE</p>
+        <h2 class="section-title" id="experienceTitle">不趕路的時候，<br>風景才會靠近。</h2>
+        <p>把行程留一些空白，享受清晨的光、午後的微風，還有一段真正屬於自己的休息時光。</p>
+        <div class="features" aria-label="露天飯店的住宿特色">
+          <div class="feature"><span class="feature-mark" aria-hidden="true">光</span><span>明亮舒心的空間</span></div>
+          <div class="feature"><span class="feature-mark" aria-hidden="true">靜</span><span>自在放鬆的步調</span></div>
+          <div class="feature"><span class="feature-mark" aria-hidden="true">息</span><span>旅途中安心休息</span></div>
+          <div class="feature"><span class="feature-mark" aria-hidden="true">風</span><span>貼近自然的感受</span></div>
         </div>
       </div>
     </section>
 
-    <section class="visit" id="visit" aria-labelledby="visitTitle">
-      <div class="wrap reveal">
-        <p class="eyebrow">THE BLUE SKY LETTER</p>
-        <h2 class="section-title" id="visitTitle">把下一杯好咖啡，寄到你的日常裡。</h2>
-        <p class="section-copy">每月一封風味通信，分享新豆、沖煮靈感與只給會員的小小驚喜。</p>
-        <form class="subscribe-form" id="subscribeForm">
-          <input type="email" aria-label="電子郵件地址" placeholder="你的電子郵件地址" required>
-          <button type="submit">訂閱風味通信</button>
+    <section class="contact" id="contact" aria-labelledby="contactTitle">
+      <div class="wrap contact-grid">
+        <div class="contact-copy reveal">
+          <p class="eyebrow">PLAN YOUR STAY</p>
+          <h2 class="section-title" id="contactTitle">下一段旅程，<br>從好好休息開始。</h2>
+          <p>正在安排旅行或出差住宿嗎？選好預計入住日期，開始規劃一段舒服的停留。</p>
+          <div class="contact-note">留一點時間給自己，讓旅程從一夜好眠開始。</div>
+        </div>
+        <form class="booking-panel reveal" id="bookingForm">
+          <h3>規劃入住</h3>
+          <p>選擇日期與人數，查看住房洽詢資訊。</p>
+          <div class="booking-fields">
+            <div class="field"><label for="checkin">入住日期</label><input id="checkin" name="checkin" type="date" required></div>
+            <div class="field"><label for="checkout">退房日期</label><input id="checkout" name="checkout" type="date" required></div>
+            <div class="field field-wide"><label for="guests">入住人數</label><select id="guests" name="guests"><option value="1">1 位旅客</option><option value="2" selected>2 位旅客</option><option value="3">3 位旅客</option><option value="4">4 位旅客</option></select></div>
+          </div>
+          <button class="button button-dark booking-submit" type="submit">確認住宿需求 <span class="button-arrow" aria-hidden="true">→</span></button>
+          <p class="form-hint">訂房系統尚未連線，送出後將顯示洽詢提醒。</p>
         </form>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="wrap footer-grid">
-      <div class="footer-brand">
-        <a class="brand" href="#top" aria-label="回到藍天咖啡首頁"><span class="brand-mark" aria-hidden="true">B</span><span class="brand-copy"><strong>藍天咖啡</strong><small>BLUE SKY COFFEE</small></span></a>
-        <p>為喜歡手沖咖啡的你，留下一段慢慢品味、微微放晴的時間。</p>
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a class="brand" href="#top" aria-label="回到露天飯店首頁"><span class="brand-mark" aria-hidden="true">露</span><span class="brand-name">露天飯店<small>OPEN SKY HOTEL</small></span></a>
+          <p>為每一段旅程，準備一處舒適自在的停留。讓休息，也成為旅行的一部分。</p>
+        </div>
+        <nav class="footer-nav" aria-label="頁尾導覽">
+          <a href="#about">認識露天</a><a href="#rooms">住宿空間</a><a href="#experience">自在時光</a><a href="#contact">住房洽詢</a>
+        </nav>
       </div>
-      <div>
-        <p class="footer-heading">EXPLORE</p>
-        <div class="footer-links"><a href="#story">我們的故事</a><a href="#coffee">本季選豆</a><a href="#brew">沖煮日常</a></div>
-      </div>
-      <div>
-        <p class="footer-heading">CONTACT</p>
-        <div class="footer-contact"><a href="mailto:hello@bluesky.coffee">hello@bluesky.coffee</a><span>台中市西屯區晨光路 100 號</span><span>每日 10:00 — 19:00</span></div>
-      </div>
+      <div class="footer-bottom"><span>© 2026 露天飯店 OPEN SKY HOTEL</span><span class="footer-motto">A PLACE TO BREATHE, A MOMENT TO STAY.</span></div>
     </div>
-    <div class="wrap footer-bottom"><span>© 2025 BLUE SKY COFFEE. ALL RIGHTS RESERVED.</span><span>BREW SLOW · LIVE BRIGHT</span></div>
   </footer>
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
   <script>
     const menuToggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
+    const navLinks = document.querySelector('#navLinks');
+    const bookingForm = document.querySelector('#bookingForm');
+    const checkin = document.querySelector('#checkin');
+    const checkout = document.querySelector('#checkout');
     const toast = document.querySelector('#toast');
     let toastTimer;
 
-    function closeMenu() {
-      navLinks.classList.remove('open');
-      menuToggle.setAttribute('aria-expanded', 'false');
-      menuToggle.setAttribute('aria-label', '開啟導覽選單');
-      menuToggle.textContent = '☰';
-    }
-
-    menuToggle.addEventListener('click', () => {
-      const isOpen = navLinks.classList.toggle('open');
+    function setMenuState(isOpen) {
+      navLinks.classList.toggle('open', isOpen);
       menuToggle.setAttribute('aria-expanded', String(isOpen));
       menuToggle.setAttribute('aria-label', isOpen ? '關閉導覽選單' : '開啟導覽選單');
       menuToggle.textContent = isOpen ? '×' : '☰';
+    }
+
+    menuToggle.addEventListener('click', function () {
+      setMenuState(menuToggle.getAttribute('aria-expanded') !== 'true');
     });
 
-    navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+    navLinks.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () { setMenuState(false); });
+    });
+
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape') setMenuState(false);
+    });
+
+    function localDateText(date) {
+      const localDate = new Date(date.getTime() - date.getTimezoneOffset() * 60000);
+      return localDate.toISOString().slice(0, 10);
+    }
+
+    const todayText = localDateText(new Date());
+    checkin.min = todayText;
+    checkout.min = todayText;
+
+    checkin.addEventListener('change', function () {
+      checkout.min = checkin.value || todayText;
+      if (checkout.value && checkout.value <= checkin.value) checkout.value = '';
+      checkout.setCustomValidity('');
+    });
+
+    checkout.addEventListener('change', function () {
+      if (checkin.value && checkout.value && checkout.value <= checkin.value) {
+        checkout.setCustomValidity('退房日期需晚於入住日期。');
+      } else {
+        checkout.setCustomValidity('');
+      }
+    });
 
     function showToast(message) {
       window.clearTimeout(toastTimer);
       toast.textContent = message;
       toast.classList.add('show');
-      toastTimer = window.setTimeout(() => toast.classList.remove('show'), 2600);
+      toastTimer = window.setTimeout(function () { toast.classList.remove('show'); }, 4200);
     }
 
-    document.querySelectorAll('[data-coffee]').forEach(button => {
-      button.addEventListener('click', () => showToast(`已將「${button.dataset.coffee}」加入你的收藏。`));
-    });
-
-    document.querySelector('#subscribeForm').addEventListener('submit', event => {
+    bookingForm.addEventListener('submit', function (event) {
       event.preventDefault();
-      const form = event.currentTarget;
-      if (!form.checkValidity()) return;
-      form.reset();
-      showToast('謝謝訂閱，下一封晴朗的風味通信即將寄出。');
+      if (!bookingForm.checkValidity()) {
+        bookingForm.reportValidity();
+        return;
+      }
+      if (checkin.value && checkout.value && checkout.value <= checkin.value) {
+        checkout.setCustomValidity('退房日期需晚於入住日期。');
+        checkout.reportValidity();
+        return;
+      }
+      showToast('此展示頁尚未連接訂房系統，住宿需求已備妥，請於正式上線後洽詢飯店。');
     });
 
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const revealItems = document.querySelectorAll('.reveal');
     if (reduceMotion || !('IntersectionObserver' in window)) {
-      revealItems.forEach(item => item.classList.add('visible'));
+      revealItems.forEach(function (item) { item.classList.add('visible'); });
     } else {
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
+      const observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
           if (entry.isIntersecting) {
             entry.target.classList.add('visible');
             observer.unobserve(entry.target);
           }
         });
       }, { threshold: .12 });
-      revealItems.forEach(item => observer.observe(item));
+      revealItems.forEach(function (item) { observer.observe(item); });
     }
   </script>
 </body>
